@@ -1,0 +1,24 @@
+MTreeView Change Logs
+
+v2.1
+ - the style of the selected can be set upon widget call using the added property 'selectedStyle'
+ - added the property 'ajaxOptions' so it can render ajaxLinks if the said property is given (see @CHtml::ajaxOptions)
+ - improved the comparison of the selected url with each node's url
+ - fixed the rendering of htmlOptions when the node has no link
+
+v2
+ - added the option 'encode' (bool), which will CHtml::encode() the node if set to true
+ - edited some codes
+ - changed the template default to {icon} {text}" (added space in between)
+ - removed the field 'position' as one of the selected field to avoid errors in query
+ - fixed the indentation. Proper indentation is lost when file is opened in other editors such as Notepad++.
+ - redeclared the static variables to its default values so as not to affect other MTreeView especially when rendered in a single page.
+ - allowed declaring of array in url, just like that in Yii::app()->createUrl()
+ - revision 1: included the 'options' field even in processing the fields when the url is array and if 'options' is given
+ 
+v1.1
+ - added 'options' among the fields, which will serve as the htmlOptions for each node. Affects both hierarch models and AJAX calls
+ - added $nodeOptions in formatLinks() - revision 2: fixed the reset value of $_template_ (thanks to Timbo)
+ 
+v1
+ - initial release
